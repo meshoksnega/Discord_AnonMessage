@@ -13,7 +13,7 @@ export async function sendMessage() {
         return;
     }
 
-    const senderName = nameToggle.checked ? nameInput.value.trim() : 'Аноним';
+    const senderName = nameToggle.checked ? nameInput.value.trim() : 'Anonymous';
     
     const embed = {
         title: '📨 New Message!',
