@@ -15,6 +15,12 @@ A simple tool to send anonymous messages to a Discord channel using webhooks. Th
 3. Optionally, add a name to the message for a more personalized experience.
 
 **Screenshots**:  
-- [Anonymous Message Preview](https://i.imgur.com/B5iUpfK.png)  
-- [Message with Name Preview](https://i.imgur.com/R0UqjtJ.png)  
-- [Bot Interface](https://i.imgur.com/K2nhtDN.png)
+
+1. Anonymous Message
+<img src="./img/Anonim.png" alt="Anonymous Message Preview">
+
+2. Message with Name
+<img src="./img/NoAnonim.png" alt="Message with Name Preview">
+
+3. Website
+<img src="./img/WebSiteLook.png" alt="Website">
