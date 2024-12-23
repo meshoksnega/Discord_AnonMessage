@@ -16,12 +16,12 @@ export async function sendMessage() {
     const senderName = nameToggle.checked ? nameInput.value.trim() : 'Аноним';
     
     const embed = {
-        title: '📨 Новое сообщение',
+        title: '📨 New Message!',
         description: message,
         color: 0x5865f2,
         timestamp: new Date().toISOString(),
         footer: {
-            text: `Отправлено: ${senderName}`
+            text: `Send: ${senderName}`
         }
     };
 
@@ -37,16 +37,16 @@ export async function sendMessage() {
         });
 
         if (response.ok) {
-            showStatus('Сообщение успешно отправлено!', 'success');
+            showStatus('Message successfully sended!', 'success');
             messageInput.value = '';
             if (nameToggle.checked && !nameInput.value.trim()) {
-                showStatus('Имя не указано, сообщение отправлено анонимно', 'success');
+                showStatus('Name not specified, message sent anonymously', 'success');
             }
         } else {
             const data = await response.json();
-            showStatus('Ошибка отправки: ' + (data.message || 'Неизвестная ошибка'), 'error');
+            showStatus('Sending error: ' + (data.message || 'Неизвестная ошибка'), 'error');
         }
     } catch (error) {
-        showStatus('Ошибка отправки: ' + error.message, 'error');
+        showStatus('Sending error: ' + error.message, 'error');
     }
 }
