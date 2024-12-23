@@ -1,6 +1,6 @@
 import { showStatus } from './utils.js';
 
-const WEBHOOK_URL = 'https://discord.com/api/webhooks/1320798009906303037/BwZjkuXYLLPU-XLxhR9SdoIBZwxoiN3KCe1REegUh6VIweXnB9p743wHlR47phBAfM1G';
+const WEBHOOK_URL = 'Add Your webhook there!';
 
 export async function sendMessage() {
     const messageInput = document.getElementById('messageInput');
