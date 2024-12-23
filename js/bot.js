@@ -17,19 +17,19 @@ async function sendMessage() {
     const message = messageInput.value.trim();
 
     if (!message) {
-        showStatus('Пожалуйста, введите сообщение', 'error');
+        showStatus('Please enter a message', 'error');
         return;
     }
 
     const senderName = nameToggle.checked ? nameInput.value.trim() : 'Аноним';
     
     const embed = {
-        title: '📨 Новое сообщение',
+        title: '📨 New message!',
         description: message,
         color: 0x5865f2,
         timestamp: new Date().toISOString(),
         footer: {
-            text: `Отправлено: ${senderName}`
+            text: `Sended: ${senderName}`
         }
     };
 
@@ -45,17 +45,17 @@ async function sendMessage() {
         });
 
         if (response.ok) {
-            showStatus('Сообщение успешно отправлено!', 'success');
+            showStatus('Message sent successfully!', 'success');
             messageInput.value = '';
             if (nameToggle.checked && !nameInput.value.trim()) {
                 showStatus('Имя не указано, сообщение отправлено анонимно', 'success');
             }
         } else {
             const data = await response.json();
-            showStatus('Ошибка отправки: ' + (data.message || 'Неизвестная ошибка'), 'error');
+            showStatus('Sending error: ' + (data.message || 'Неизвестная ошибка'), 'error');
         }
     } catch (error) {
-        showStatus('Ошибка отправки: ' + error.message, 'error');
+        showStatus('Sending error: ' + error.message, 'error');
     }
 }
 
