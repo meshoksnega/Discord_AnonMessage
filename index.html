@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Отправка сообщений</title>
+    <title>AnonMessages</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -11,18 +11,18 @@
         <div class="wumpus-container">
             <img src="https://tenor.com/view/wumpus-wave-gif-6188034867212190706" alt="Wumpus" class="wumpus">
         </div>
-        <h1>Отправка сообщений в Discord</h1>
+        <h1>Sending messages in Discord</h1>
         <div class="message-form">
             <div class="name-toggle">
                 <label class="checkbox-container">
                     <input type="checkbox" id="nameToggle" onchange="toggleNameInput()">
                     <span class="checkmark"></span>
-                    Указать имя
+                    Specify name
                 </label>
             </div>
             <input type="text" id="nameInput" placeholder="Ваше имя" disabled>
             <textarea id="messageInput" placeholder="Введите ваше сообщение"></textarea>
-            <button onclick="sendMessage()">Отправить сообщение</button>
+            <button onclick="sendMessage()">Send message</button>
         </div>
         <div id="status" class="status"></div>
     </div>
